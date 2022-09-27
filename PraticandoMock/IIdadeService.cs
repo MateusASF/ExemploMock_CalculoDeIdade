@@ -10,5 +10,7 @@ namespace PraticandoMock
     {
         //método abstraído para calcular a Idade na IdadeService
         public int CalculoIdade(int ano);
+
+        public bool PalavraPalindroma(string palavra);
     }
 }

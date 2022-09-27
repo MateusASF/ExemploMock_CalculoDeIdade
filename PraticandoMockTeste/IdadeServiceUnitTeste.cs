@@ -21,5 +21,38 @@ namespace PraticandoMockTeste
             result.ShouldBe(50);//usamos o ShoulBe com valor 50, para ver se o calculo de idade de uma pessoa
                                 //que nasceu em 1972 (parametro do método) terá 50 anos no ano passado (valor que foi mockado)
         }
+
+
+        [Fact]
+        public void PalvaraPalindroma()
+        {
+            var sut = new IdadeService();
+            var result = sut.PalavraPalindroma("Arara");
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void PalvaraNaoPalindroma()
+        {
+            var sut = new IdadeService();
+            var result = sut.PalavraPalindroma("morango");
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void FrasePalindroma()
+        {
+            var sut = new IdadeService();
+            var result = sut.PalavraPalindroma("Roma me tem amor");
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void FraseNaoPalindroma()
+        {
+            var sut = new IdadeService();
+            var result = sut.PalavraPalindroma("Eu sou feliz");
+            Assert.False(result);
+        }
     }
 }
