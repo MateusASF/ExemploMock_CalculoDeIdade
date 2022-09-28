@@ -27,7 +27,7 @@ namespace PraticandoMock
 
         public bool PalavraPalindroma(string palavraOriginal)
         {
-            palavraOriginal = palavraOriginal.Trim().Replace(" ", "").ToLower();
+            palavraOriginal = palavraOriginal.Trim().Replace(" ", "").Replace(",", "").ToLower();
             char[] charArray = palavraOriginal.ToCharArray();
             
             Array.Reverse(charArray);
